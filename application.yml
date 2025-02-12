@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: KLISTRA IN URO FRÅN ATLAS HÄR
+
+jwt:
+  secret: hfaiehfisehfosndfejndfeswljrfeowfnjehwbewios4ngvhtrwglp4rkledf
+  expirationMs: 36000000
