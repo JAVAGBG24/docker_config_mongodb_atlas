@@ -24,4 +24,19 @@ Det innebär att ni startar docker sen startar ni Spring boot precis som vanligt
 ### application.yml
 Ni skapa en ny fil i mappen resources, där ni har application.properties, och döper den till **application.yml**
 Ni kan kopiera innehållet från det här repot och klistra in.
+### OBS! den här filen MÅSTE ligger i resources foldern!
+På raden för **uri** ska ni ta connections string ifrån MongoDB atlas. ni ska byta ut <db_username> till ditt username för användaren till databasen och ta bort < och >
+Gör samma sak med <db_password>
+Glöm inte att ni måste ha satt network access till ip 0.0.0.0, detta gör ni inne i Atlas.
+```yaml
+spring:
+  data:
+    mongodb:
+      uri: ATLAS CONNECTIONS STRING HÄR
+```
 
+### Starta Docker och Spring Boot
+1. Öppna en terminal och se till att gå till projektet så du står i foldern
+2. Första gången du startar så kör du **docker compose build**
+3. När det är klart så kan du starta genom att köra **docker-compose up -d** så startar du detached vilket innebär att du också startar Spring Boot precis som vanligt i IntelliJ
+4. För att stänga av kör du **docker-compose down**
